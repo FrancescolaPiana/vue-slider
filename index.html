@@ -26,10 +26,12 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
-                    <div class="thumb active">
-                        <img v-for="(sld,index) in slides" :key="index" :src="slides[activeindex++].image" alt="Svezia"/>
+                    <div class="prev" @click="prevGame()"></div>
+                    <div class="next" @click="nextGame()"></div>
+                    <div class="mnd">
+                                <!-- classe active if -->
+                        <img class="thumb" :class="index === activeindex ? 'active' : '' " v-for="(sld,index) in slides" :key="index" 
+                        :src="slides[index].image" :alt="slides[index].title"/>
                     </div>
 
             </div>

@@ -103,3 +103,21 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
+
+
+/* my stiles */
+
+.mnd{
+    display: flex;
+    flex-direction: column;
+    height: calc((300px) / 5);
+    background: #000;
+    position: relative;
+}
+
+.mnd img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

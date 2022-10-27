@@ -22,7 +22,7 @@ const slides = [
     }
 ];
 
-console.log(slides[0].image);
+console.log(slides);
 
 const { createApp } = Vue;
 
@@ -32,6 +32,21 @@ data(){
         activeindex: 0,
         slides,
     }
+},
+methods:{
+    prevGame(){
+        this.activeindex--
+        if (this.activeindex < 0) {
+            this.activeindex = this.slides.length - 1
+        }
+    },
+    nextGame(){
+        this.activeindex++
+        if (this.activeindex >= this.slides.length) {
+            this.activeindex = 0
+        }
+    }
 }
+
 });
 app.mount('#app')
