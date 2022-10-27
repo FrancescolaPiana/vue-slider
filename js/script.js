@@ -30,7 +30,7 @@ const app = createApp({
 data(){
     return {
         activeindex: 0,
-        slides
+        slides,
     }
 }
 });
