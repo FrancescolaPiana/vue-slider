@@ -22,4 +22,16 @@ const slides = [
     }
 ];
 
-console.log(slides);
+console.log(slides[0].image);
+
+const { createApp } = Vue;
+
+const app = createApp({
+data(){
+    return {
+        activeindex: 0,
+        slides
+    }
+}
+});
+app.mount('#app')
