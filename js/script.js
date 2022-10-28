@@ -45,8 +45,26 @@ methods:{
         if (this.activeindex >= this.slides.length) {
             this.activeindex = 0
         }
+    },
+    autoScroll(){
+    this.autoscroll = setInterval(() => {
+        this.nextGame()
+    }, 2000)
+    },
+    Stop(){
+        clearInterval(
+            this.autoscroll
+        )
+        this.autoscroll = null;
+    },
+    setImage(){
+        this.activeindex = index;
     }
-}
+},
+    mounted(){
+        this.autoScroll();
+    }
 
 });
 app.mount('#app')
+
